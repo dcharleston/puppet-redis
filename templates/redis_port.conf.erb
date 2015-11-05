@@ -82,7 +82,7 @@ databases <%= @redis_databases %>
 #   Note: you can disable saving at all commenting all the save lines.
 
 <%- if @redis_snapshotting
-      @redis_snapshotting.each do |seconds,changes|
+      @redis_snapshotting.each_pair do |seconds,changes|
 %>
 save <%= @seconds %> <%= @changes %>
 <%-   end %>
